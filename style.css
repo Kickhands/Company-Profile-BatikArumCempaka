@@ -1,0 +1,947 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@600&display=swap");
+
+body {
+  background-color: #ffffff; /* Light beige background for a warm, classic feel */
+}
+
+/* navbar */
+.navbar {
+        padding: 1rem 2rem;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    .navbar-brand img {
+        height: 40px;
+    }
+    .nav-link {
+        color: #333 !important;
+        font-size: 1.1rem;
+        margin-left: 1.5rem;
+        transition: color 0.3s ease;
+    }
+    .nav-link:hover, .nav-link.active {
+        color: #f4a261 !important;
+    }
+    .navbar-toggler {
+        border: none;
+        outline: none;
+    }
+    /* Hide/Show on scroll */
+    .navbar.hidden {
+        transform: translateY(-100%);
+    }
+    @media (max-width: 992px) {
+        .navbar-nav {
+            background-color: #fff;
+            padding: 1rem;
+        }
+        .nav-link {
+            margin-left: 0;
+            padding: 0.5rem 1rem;
+        }
+    }
+
+/* intro */
+    .intro {
+        padding: 50px 0;
+    }
+    .video-wrapper {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 aspect ratio */
+        height: 0;
+        overflow: hidden;
+    }
+    .video-wrapper video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    h1.display-4 {
+        font-weight: 700;
+        /* text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7); */
+    }
+    .lead {
+        font-size: 1.25rem;
+    }
+    .btn-custom {
+        border: 2px solid #D7A86E;
+        color: #fff;
+        background-color: #D7A86E;
+        padding: 10px 20px;
+        transition: background-color 0.3s ease;
+    }
+    .btn-custom:hover {
+        background-color: #C28F5A;
+        border-color: #C28F5A;
+    }
+    @media (max-width: 992px) {
+        .row {
+            flex-direction: column-reverse;
+        }
+        .col-lg-6 {
+            width: 100%;
+        }
+        .video-wrapper {
+            padding-bottom: 75%;
+        }
+        .col-lg-6:first-child {
+            background: none;
+            color: #3C2F2F;
+            padding: 30px;
+        }
+    }
+
+/*Product Home */
+.product-card {
+        width: 100%;
+        height: 400px; /* Fixed height for consistency */
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+    }
+    .card-img-top {
+        width: 100%;
+        height: 250px; /* Fixed image height */
+        object-fit: cover; /* Ensures images scale uniformly */
+    }
+    .card-body {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .card-title, .card-text {
+        margin: 0;
+    }
+    .p-3 {
+        padding: 1rem !important;
+    }
+    /* Hover effect for cards */
+    .product-card:hover {
+        transform: translateY(-5px);
+        transition: transform 0.3s ease;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+    /* Responsive adjustments */
+    @media (max-width: 992px) {
+        .product-card {
+            height: 350px;
+        }
+        .card-img-top {
+            height: 200px;
+        }
+    }
+
+/* about */
+.font_about {
+  font-weight: 300;
+  font-family: "Outfit", sans-serif;
+  color: #521C0D; /* Dark brown for text */
+}
+
+.about {
+  background-color: #F4E7E1; /* Light beige for about section */
+  border-radius: 0px;
+  width: 100%;
+  height: auto;
+  color: #521C0D; /* Dark brown text */
+}
+
+.about_Us {
+  background-color: #F4E7E1; /* Light beige for consistency */
+  border-radius: 0px;
+  width: 100%;
+  height: auto;
+  color: #521C0D; /* Dark brown text */
+}
+
+/* Produk */
+.produk {
+  background-color: #F4E7E1; /* Light beige background */
+  border-radius: 85px 85px 0px 0px;
+  width: 100%;
+  height: auto;
+  color: #521C0D; /* Dark brown text */
+}
+
+.produk .col-lg-7 {
+  padding-top: 100px;
+}
+
+@media (max-width: 770px) {
+  .produk {
+    border-radius: 50px 50px 0px 0px;
+  }
+
+  .produk .col-lg-7 {
+    padding-top: 60px;
+  }
+}
+
+.card img {
+  height: auto;
+  width: 100%;
+}
+
+/* brand */
+.brand .container {
+  margin-top: 10rem;
+  background-color: #F4E7E1; /* Light beige */
+  border-radius: 85px;
+}
+
+.brand .col-lg-7 {
+  padding-top: 50px;
+}
+
+/* hero */
+.hero-top {
+  background: linear-gradient(0deg, rgba(82, 28, 13, 0.6), rgba(82, 28, 13, 0.8)), url("./img/banner/banner-about1.png");
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-repeat: no-repeat;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(./img/banner/moto1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  filter: brightness(60%);
+}
+
+.hero-content {
+  position: relative;
+  font-family: "Outfit", sans-serif;
+  color: #FF9B45; /* Gold for hero text */
+  text-align: center;
+  margin: 0.625rem;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 0;
+  color: #FF9B45; /* Gold for title */
+}
+
+.hero-subtitle {
+  font-weight: 300;
+  margin-top: 1rem;
+  color: #F4E7E1; /* Light beige for subtitle contrast */
+}
+
+/* brand about */
+.brand2 .container {
+  margin-top: 10rem;
+  background-color: #F4E7E1; /* Light beige */
+  border-radius: 85px;
+  padding-top: 50px;
+}
+
+/* Keuntungan */
+.profit {
+  width: 100%;
+  height: auto;
+  background-color: #F4E7E1; /* Light beige */
+  color: #521C0D; /* Dark brown text */
+}
+
+.nav-pills {
+  font-family: "Outfit", sans-serif;
+  font-weight: 300;
+}
+
+/* Navigasi */
+/* 1. tdk aktif */
+.nav-pills .pill-1 .nav-link:not(.active),
+.nav-pills .pill-2 .nav-link:not(.active),
+.nav-pills .pill-3 .nav-link:not(.active) {
+  background-color: #D5451B; /* Secondary color for inactive tabs */
+  color: #F4E7E1; /* Light beige text */
+}
+
+/* 2. aktif */
+.nav-pills .pill-1 .nav-link,
+.nav-pills .pill-2 .nav-link,
+.nav-pills .pill-3 .nav-link {
+  background-color: #FF9B45; /* Primary gold for active tabs */
+  color: #521C0D; /* Dark brown text */
+}
+
+/* akhir navigasi */
+
+.tab-content {
+  background-color: #F4E7E1; /* Light beige */
+  border-radius: 50px;
+  display: inline-block;
+  width: 70%;
+  font-family: "Outfit", sans-serif;
+  height: auto;
+  color: #521C0D; /* Dark brown text */
+}
+
+@media (max-width: 870px) {
+  .tab-content {
+    width: 90%;
+  }
+}
+
+a,
+a:hover {
+  text-decoration: none;
+  color: #521C0D; /* Dark brown for links */
+}
+
+.section-products {
+  padding: 80px 0 54px;
+}
+
+.section-products .header {
+  margin-bottom: 50px;
+  font-family: Fredoka;
+}
+
+.section-products .header h3 {
+  font-size: 1rem;
+  color: #fe302f;
+  font-weight: 500;
+  font-family: Outfit;
+}
+
+.section-products .header h1 {
+  font-size: 2.2rem;
+  font-weight: 400;
+  color: #000000;
+  font-family: Outfit;
+}
+
+.section-products .single-product {
+  margin-bottom: 26px;
+}
+
+.section-products .single-product .part-1 {
+  position: relative;
+  height: 290px;
+  max-height: 290px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.section-products .single-product .part-1::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  transition: all 0.3s;
+}
+
+.section-products .single-product:hover .part-1::before {
+  transform: scale(1.2, 1.2) rotate(5deg);
+}
+
+.section-products .part-1::before {
+  background-color: #ffffff;
+  background-size: 80%;
+}
+
+.section-products #product-1 .part-1::before {
+  background: url("img/produk/JatiAngkringanCoklat.JPG") no-repeat center;
+  background-size: 75%;
+  transition: all 0.3s;
+  background-color: #ffffff;
+}
+
+.section-products #product-2 .part-1::before {
+  background: url("img/produk/PringpringanCoklat.JPG") no-repeat center;
+  background-size: 75%;
+  transition: all 0.3s;
+  background-color: #ffffff;
+}
+
+.section-products #product-6 .part-1::before {
+  background: url("img/produk/KupuKupu.JPG") no-repeat center;
+  background-size: 75%;
+  transition: all 0.3s;
+  background-color: #ffffff;
+}
+
+.section-products #product-7 .part-1::before {
+  background: url("img/produk/ParangBunga.JPG") no-repeat center;
+  background-size: 75%;
+  transition: all 0.3s;
+  background-color: #ffffff;
+}
+
+.section-products #product-3 .part-1::before {
+  background: url("img/produk/Kipas.JPG") no-repeat center;
+  background-size: 75%;
+  transition: all 0.3s;
+  background-color: #ffffff;
+}
+
+.section-products #product-4 .part-1::before {
+  background: url("img/produk/Mirunggan.JPG") no-repeat center;
+  background-size: 75%;
+  transition: all 0.3s;
+  background-color: #ffffff;
+}
+
+.section-products #product-5 .part-1::before {
+  background: url("img/produk/DaunKatuk.JPG") no-repeat center;
+  background-size: 75%;
+  transition: all 0.3s;
+  background-color: #ffffff;
+}
+
+.section-products #product-8 .part-1::before {
+  background: url("img/produk/Idungan.JPG") no-repeat center;
+  background-size: 75%;
+  transition: all 0.3s;
+  background-color: #ffffff;
+}
+
+.section-products #product-13 .part-1::before {
+  background: url("img/produk/Jati.JPG") no-repeat center;
+  background-size: 75%;
+  transition: all 0.3s;
+  background-color: #ffffff;
+}
+
+.section-products #product-14 .part-1::before {
+  background: url("img/produk/DaunCincau.JPG") no-repeat center;
+  background-size: 75%;
+  transition: all 0.3s;
+  background-color: #ffffff;
+}
+
+.section-products #product-15 .part-1::before {
+  background: url("img/produk/BoketanLove.JPG") no-repeat center;
+  background-size: 75%;
+  transition: all 0.3s;
+  background-color: #ffffff;
+}
+
+.section-products #product-16 .part-1::before {
+  background: url("img/produk/Boketan.JPG") no-repeat center;
+  background-size: 75%;
+  transition: all 0.3s;
+  background-color: #ffffff;
+}
+
+.section-products #product-17 .part-1::before {
+  background: url("img/produk/Klaseman.JPG") no-repeat center;
+  background-size: 75%;
+  transition: all 0.3s;
+  background-color: #ffffff;
+}
+
+.section-products #product-18 .part-1::before {
+  background: url("img/produk/Unggulan\ Ukel\ Materos.JPG") no-repeat center;
+  background-size: 75%;
+  transition: all 0.3s;
+  background-color: #ffffff;
+}
+
+.section-products #product-19 .part-1::before {
+  background: url("img/produk/SarnganMateros.JPG") no-repeat center;
+  background-size: 75%;
+  transition: all 0.3s;
+  background-color: #ffffff;
+}
+
+.section-products #product-20 .part-1::before {
+  background: url("img/produk/Nanasan.JPG") no-repeat center;
+  background-size: 75%;
+  transition: all 0.3s;
+  background-color: #ffffff;
+}
+
+.section-products #product-21 .part-1::before {
+  background: url("img/produk/Kepiting.JPG") no-repeat center;
+  background-size: 75%;
+  transition: all 0.3s;
+  background-color: #ffffff;
+}
+
+.section-products #product-22 .part-1::before {
+  background: url("img/produk/JatiKepiting.JPG") no-repeat center;
+  background-size: 75%;
+  transition: all 0.3s;
+  background-color: #ffffff;
+}
+
+.section-products #product-23 .part-1::before {
+  background: url("img/produk/DaunJati.JPG") no-repeat center;
+  background-size: 75%;
+  transition: all 0.3s;
+  background-color: #ffffff;
+}
+
+.section-products #product-24 .part-1::before {
+  background: url("img/produk/Spiral.JPG") no-repeat center;
+  background-size: 75%;
+  transition: all 0.3s;
+  background-color: #ffffff;
+}
+
+.section-products #product-25 .part-1::before {
+  background: url("img/produk/MotifGoyor.JPG") no-repeat center;
+  background-size: 75%;
+  transition: all 0.3s;
+  background-color: #ffffff;
+}
+
+.section-products #product-26 .part-1::before {
+  background: url("img/produk/BoketanBunga.JPG") no-repeat center;
+  background-size: 75%;
+  transition: all 0.3s;
+  background-color: #ffffff;
+}
+
+.section-products #product-27 .part-1::before {
+  background: url("img/produk/BoketanWaru.JPG") no-repeat center;
+  background-size: 75%;
+  transition: all 0.3s;
+  background-color: #ffffff;
+}
+
+.section-products #product-28 .part-1::before {
+  background: url("img/produk/Wayang.JPG") no-repeat center;
+  background-size: 75%;
+  transition: all 0.3s;
+  background-color: #ffffff;
+}
+
+.section-products #product-29 .part-1::before {
+  background: url("img/produk/PoketanBurung.JPG") no-repeat center;
+  background-size: 75%;
+  transition: all 0.3s;
+  background-color: #ffffff;
+}
+
+.section-products #product-30 .part-1::before {
+  background: url("img/produk/KipasAlam.JPG") no-repeat center;
+  background-size: 75%;
+  transition: all 0.3s;
+  background-color: #ffffff;
+}
+
+.section-products #product-31 .part-1::before {
+  background: url("img/produk/WadarMudik.JPG") no-repeat center;
+  background-size: 75%;
+  transition: all 0.3s;
+  background-color: #ffffff;
+}
+
+.section-products #product-32 .part-1::before {
+  background: url("img/produk/Sidomukti.JPG") no-repeat center;
+  background-size: 75%;
+  transition: all 0.3s;
+  background-color: #ffffff;
+}
+
+.section-products #product-33 .part-1::before {
+  background: url("img/produk/GotikCap.JPG") no-repeat center;
+  background-size: 75%;
+  transition: all 0.3s;
+  background-color: #ffffff;
+}
+
+.section-products #product-34 .part-1::before {
+  background: url("img/produk/Simbar.JPG") no-repeat center;
+  background-size: 75%;
+  transition: all 0.3s;
+  background-color: #ffffff;
+}
+
+.section-products #product-35 .part-1::before {
+  background: url("img/produk/SisikMelik.JPG") no-repeat center;
+  background-size: 75%;
+  transition: all 0.3s;
+  background-color: #ffffff;
+}
+
+.section-products #product-36 .part-1::before {
+  background: url("img/produk/Galaran.JPG") no-repeat center;
+  background-size: 75%;
+  transition: all 0.3s;
+  background-color: #ffffff;
+}
+
+.section-products #product-37 .part-1::before {
+  background: url("img/produk/Dlorong.JPG") no-repeat center;
+  background-size: 75%;
+  transition: all 0.3s;
+  background-color: #ffffff;
+}
+
+.section-products #product-38 .part-1::before {
+  background: url("img/produk/SekarCempakaMulya.JPG") no-repeat center;
+  background-size: 75%;
+  transition: all 0.3s;
+  background-color: #ffffff;
+}
+
+.section-products #product-39 .part-1::before {
+  background: url("img/produk/RamaShinta.JPG") no-repeat center;
+  background-size: 75%;
+  transition: all 0.3s;
+  background-color: #ffffff;
+}
+
+.section-products #product-40 .part-1::before {
+  background: url("img/produk/SalaReni.JPG") no-repeat center;
+  background-size: 75%;
+  transition: all 0.3s;
+  background-color: #ffffff;
+}
+
+.section-products #product-41 .part-1::before {
+  background: url("img/produk/JaeSrimpang.JPG") no-repeat center;
+  background-size: 75%;
+  transition: all 0.3s;
+  background-color: #ffffff;
+}
+
+.section-products #product-42 .part-1::before {
+  background: url("img/produk/Buntal.JPG") no-repeat center;
+  background-size: 75%;
+  transition: all 0.3s;
+  background-color: #ffffff;
+}
+
+.section-products #product-43 .part-1::before {
+  background: url("img/produk/GunungRinggit.JPG") no-repeat center;
+  background-size: 75%;
+  transition: all 0.3s;
+  background-color: #ffffff;
+}
+
+.section-products #product-44 .part-1::before {
+  background: url("img/produk/SidomuktiUkel.JPG") no-repeat center;
+  background-size: 75%;
+  transition: all 0.3s;
+  background-color: #ffffff;
+}
+
+.section-products #product-45 .part-1::before {
+  background: url("img/produk/KawungMlinjo.JPG") no-repeat center;
+  background-size: 75%;
+  transition: all 0.3s;
+  background-color: #ffffff;
+}
+
+.section-products #product-46 .part-1::before {
+  background: url("img/produk/KawungRambut.JPG") no-repeat center;
+  background-size: 75%;
+  transition: all 0.3s;
+  background-color: #ffffff;
+}
+
+.section-products #product-47 .part-1::before {
+  background: url("img/produk/Liris.JPG") no-repeat center;
+  background-size: 75%;
+  transition: all 0.3s;
+  background-color: #ffffff;
+}
+
+.section-products #product-48 .part-1::before {
+  background: url("img/produk/Gotik.JPG") no-repeat center;
+  background-size: 75%;
+  transition: all 0.3s;
+  background-color: #ffffff;
+}
+
+.section-products #product-49 .part-1::before {
+  background: url("img/produk/SidoRantai.JPG") no-repeat center;
+  background-size: 75%;
+  transition: all 0.3s;
+  background-color: #ffffff;
+}
+
+.section-products #product-50 .part-1::before {
+  background: url("img/produk/SidoRante.JPG") no-repeat center;
+  background-size: 75%;
+  transition: all 0.3s;
+  background-color: #ffffff;
+}
+
+.section-products #product-51 .part-1::before {
+  background: url("img/produk/SodoSakler.JPG") no-repeat center;
+  background-size: 75%;
+  transition: all 0.3s;
+  background-color: #ffffff;
+}
+
+.section-products #product-52 .part-1::before {
+  background: url("img/produk/KopiPecah.JPG") no-repeat center;
+  background-size: 75%;
+  transition: all 0.3s;
+  background-color: #ffffff;
+}
+
+.section-products #product-53 .part-1::before {
+  background: url("img/produk/KawungKitiran.JPG") no-repeat center;
+  background-size: 75%;
+  transition: all 0.3s;
+  background-color: #ffffff;
+}
+
+
+.section-products .single-product .part-1 .discount,
+.section-products .single-product .part-1 .new {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  color: #ffffff;
+  background-color: #fe302f;
+  padding: 2px 8px;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+}
+
+.section-products .single-product .part-1 .new {
+  left: 0;
+  background-color: #444444;
+}
+
+.section-products .single-product .part-1 ul {
+  position: absolute;
+  bottom: -41px;
+  left: 20px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  opacity: 0;
+  transition: bottom 0.5s, opacity 0.5s;
+}
+
+.section-products .single-product:hover .part-1 ul {
+  bottom: 30px;
+  opacity: 1;
+}
+
+.section-products .single-product .part-1 ul li {
+  display: inline-block;
+  margin-right: 4px;
+}
+
+.section-products .single-product .part-1 ul li a {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  background-color: #ffffff;
+  color: #444444;
+  text-align: center;
+  box-shadow: 0 2px 20px rgb(50 50 50 / 10%);
+  transition: color 0.2s;
+}
+
+.section-products .single-product .part-1 ul li a:hover {
+  color: #fe302f;
+}
+
+.section-products .single-product .part-2 .product-title {
+  font-size: 1rem;
+  color: #000000;
+}
+
+.section-products .single-product .part-2 h4 {
+  display: inline-block;
+  font-size: 1rem;
+  color: #000000;
+}
+
+.section-products .single-product .part-2 .product-old-price {
+  position: relative;
+  padding: 0 7px;
+  margin-right: 2px;
+  opacity: 0.6;
+  color: #000000; 
+}
+
+.section-products .single-product .part-2 .product-old-price::after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #444444;
+  transform: translateY(-50%);
+  color: #ffffff;
+}
+
+.card {
+  margin-bottom: 30px;
+  background-color: #F4E7E1; /* Light beige for cards */
+  color: #521C0D; /* Dark brown text */
+}
+
+.card .card-subtitle {
+  font-weight: 300;
+  margin-bottom: 10px;
+  color: #D5451B; /* Secondary color for subtitle */
+}
+
+.product-list {
+  list-style: none;
+  padding: 0;
+}
+
+.product-list li {
+  margin-bottom: 10px;
+}
+
+.pagination {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.pagination li {
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.pagination li a {
+  display: block;
+  padding: 5px 10px;
+  background-color: #FF9B45; /* Gold for pagination */
+  text-decoration: none;
+  color: #521C0D; /* Dark brown text */
+}
+
+.pagination li.active a {
+  background-color: #D5451B; /* Secondary color for active pagination */
+  color: #F4E7E1; /* Light beige text */
+}
+
+/* footer */
+.footer-basic {
+  padding: 40px 0;
+  background-color: #521C0D; /* Dark brown footer */
+  color: #F4E7E1; /* Light beige text */
+}
+
+.footer-basic ul {
+  padding: 0;
+  list-style: none;
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+.footer-basic li {
+  padding: 0 10px;
+}
+
+.footer-basic ul a {
+  color: #F4E7E1; /* Light beige for links */
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+.footer-basic ul a:hover {
+  opacity: 1;
+}
+
+.footer-basic .social {
+  text-align: center;
+  padding-bottom: 25px;
+}
+
+.footer-basic .social > a {
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 50%;
+  background-color: #FF9B45; /* Gold for social icons */
+  color: #521C0D; /* Dark brown icon color */
+  opacity: 0.75;
+}
+
+.footer-basic .social > a:hover {
+  opacity: 1;
+}
+
+.footer-basic .copyright {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 13px;
+  color: #F4E7E1; /* Light beige for copyright */
+  margin-bottom: 0;
+}
+
+/* Tombol naik */
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  background-color: #FF9B45; /* Gold for button */
+  color: #521C0D; /* Dark brown text */
+  cursor: pointer;
+  border-radius: 200px;
+}
+
+#myBtn:hover {
+  background-color: #D5451B; /* Secondary color on hover */
+}
+
+/* Animasi */
+.naik {
+  position: relative;
+  transform: translateY(50px);
+  opacity: 0;
+  transition: all 0.7s ease;
+}
+
+.tampil {
+  position: relative;
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+/* Pastikan elemen AOS tetap terlihat setelah animasi */
+[data-aos].aos-animate {
+    opacity: 1 !important;
+    transform: none !important;
+}
+
+/* Perbaikan untuk about_Us */
+.about_Us {
+    position: relative;
+    z-index: 10; /* Pastikan tidak tertimpa elemen lain */
+}
