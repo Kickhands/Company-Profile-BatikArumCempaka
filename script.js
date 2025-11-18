@@ -1,58 +1,52 @@
-// Navbar hide/show on scroll
+const navbar = document.querySelector('.navbar');
+const scrollBtn = document.getElementById('myBtn');
 let lastScroll = 0;
-window.addEventListener('scroll', function() {
-    let currentScroll = window.scrollY;
-    const navbar = document.querySelector('.navbar');
+
+function handleNavbar() {
+    const currentScroll = window.scrollY;
+    if (!navbar) return;
     if (currentScroll > lastScroll && currentScroll > 50) {
         navbar.classList.add('hidden');
     } else {
         navbar.classList.remove('hidden');
     }
     lastScroll = currentScroll;
-});
-// Scroll to top button
-let mybutton = document.getElementById("myBtn");
-
-window.onscroll = function () {
-    scrollFunction();
-};
-function topFunction() {
-    document.documentElement.scrollTop = 0;
 }
 
-//Ketik
-var typed = new Typed(".auto-typed", {
-  strings: ["Good", "Excellent", "Perfect"],
-  typeSpeed: 100,
-  backSpeed: 100,
-  loop: true,
-});
-
-//Scroll muncul satu persatu
-window.addEventListener("scroll", muncul);
-function muncul() {
-  let elements = document.querySelectorAll(".naik");
-  for (let i = 0; i < elements.length; i++) {
-    let tinggiLayar = window.innerHeight;
-    let jarakAtasElemen = elements[i].getBoundingClientRect().top;
-    let ukuranScroll = 5;
-
-    if (jarakAtasElemen < tinggiLayar - ukuranScroll) {
-      elements[i].classList.add("tampil");
+function toggleScrollButton() {
+    if (!scrollBtn) return;
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        scrollBtn.style.display = 'block';
     } else {
-      elements[i].classList.remove("tampil");
+        scrollBtn.style.display = 'none';
     }
-  }
 }
 
-const spans = document.querySelectorAll("h1 span");
-spans.forEach((span) =>
-  span.addEventListener("mouseover", function (e) {
-    span.classList.add("animated", "rubberBand");
-  })
-);
-spans.forEach((span) =>
-  span.addEventListener("mouseout", function (e) {
-    span.classList.remove("animated", "rubberBand");
-  })
-);
+function revealOnScroll() {
+    const elements = document.querySelectorAll('.naik');
+    if (!elements.length) return;
+    const viewportHeight = window.innerHeight;
+    elements.forEach((el) => {
+        const rectTop = el.getBoundingClientRect().top;
+        if (rectTop < viewportHeight - 5) {
+            el.classList.add('tampil');
+        } else {
+            el.classList.remove('tampil');
+        }
+    });
+}
+
+window.addEventListener('scroll', () => {
+    handleNavbar();
+    toggleScrollButton();
+    revealOnScroll();
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    toggleScrollButton();
+    revealOnScroll();
+});
+
+window.topFunction = function () {
+    document.documentElement.scrollTop = 0;
+};
